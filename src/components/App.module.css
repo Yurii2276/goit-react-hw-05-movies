@@ -1,0 +1,28 @@
+.headerContainer {
+  height: 50px;
+  background-color: white;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+}
+
+.headerLink {
+  margin-left: 30px;
+  text-decoration: none;
+  color: black;
+  padding: 20px 20px;
+  font-size: 20px;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.headerLinkActive {
+    margin-left: 30px;
+    text-decoration: none;
+    color: black;
+    padding: 20px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    transition: all 0.3s;
+  color: red;
+}
