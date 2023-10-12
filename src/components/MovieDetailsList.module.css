@@ -1,0 +1,45 @@
+.movieDetails{
+display: flex;
+flex-direction: row;
+gap: 30px;
+}
+
+.moviePoster{
+    margin-top: 35px;
+    margin-bottom: 35px;
+    margin-left: 20px;
+}
+
+.movieInfo{
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+.moveData{
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+
+
+}
+.movieDetails{
+    font-size: 14px;
+    font-weight: 400;
+
+}
+
+.castRewiewTitle{
+font-size: 18px;
+margin-top: 6px;
+margin-right: 15px;
+margin-left: 20px;
+
+}
+
+.castRewiewTitleContanier{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}

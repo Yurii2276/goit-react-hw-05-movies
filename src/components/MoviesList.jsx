@@ -9,8 +9,8 @@ export default function MoviesList({ movies }) {
 
   return (
     <ul className={css.moviesList}>
-      {showMovies &&
-        movies.map(movie => {
+      {showMovies ?
+        (movies.map(movie => {
           return (
             <li key={movie.id}>
               <Link to={`/movies/${movie.id}`}>
@@ -18,7 +18,7 @@ export default function MoviesList({ movies }) {
               </Link>
             </li>
           );
-        })}
+        })) : (<p>Detailed information about the movie is not available on the server.</p>) }
     </ul>
   );
 }

@@ -1,25 +1,49 @@
 import React from 'react';
 
+import css from './MovieDetailsList.module.css';
+
 export default function MovieDetailsList({ movie }) {
-  const {backdrop_path, genres, overview, release_date, vote_average, title} = movie;
+  const data = movie.release_date;
+  const year = data.substring(0, 4);
+
+  const defaultImg =
+    'https://ireland.apollo.olxcdn.com/v1/files/0iq0gb9ppip8-UA/image;s=1000x700';
+
   return (
     <div>
-      <div className="movie-details">
-      <div className="movie-poster">
-        <img src={`https://image.tmdb.org/t/p/w500/${backdrop_path}`} alt={title} />
+      <div className={css.movieDetails}>
+        <div className={css.moviePoster}>
+          <img
+            src={
+              movie.backdrop_path
+                ? `https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`
+                : defaultImg
+            }
+            width={250}
+            alt="poster"
+          />
+        </div>
+        <div className={css.movieInfo}>
+          <h2>
+            {movie.title} {year}
+          </h2>
+
+          <p className={css.moveData}>
+            User Score:{' '}
+            <span className={css.movieDetails}>{movie.vote_average ? Math.round((movie.vote_average * 100) / 10) : '...'}%</span>
+          </p>
+          <p className={css.moveData}>
+            Overview: <span className={css.movieDetails}>{movie.overview}</span>
+          </p>
+          <p className={css.moveData}>
+            Genres:{' '}
+            <span className={css.movieDetails}>
+              {movie.genres.map(genre => genre.name).join(', ')}
+            </span>
+          </p>
+        </div>
       </div>
-      <div className="movie-info">
-        <h2>{title}</h2>
-        <p>({release_date})</p>
-        <p>User Score: {vote_average}</p>
-        <p>Overview: {overview}</p>
-        <p>Genres: {genres}</p>
-        <hr />
-        <h3>Additional Information</h3>
-        <p>Cast: 0000000000</p>
-        <p>Reviews: 000000</p>
-      </div>
-    </div>
+      <hr />
     </div>
   );
 }

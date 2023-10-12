@@ -8,17 +8,18 @@ import { findTrendMovies } from 'servises/Api';
 
 export default function Home() {
 
-  const [movies, setMovies] = useState(null);
-  // eslint-disable-next-line
-  const [error, setError] = useState(null);
+  const [movies, setMovies] = useState([]);
+
+  const [error, setError] = useState([]);
 
   useEffect(() => {
     const fetchTrendMovies = async () => {
       try {
         const dataMovies = await findTrendMovies();
         setMovies(dataMovies.results);
-        console.log(movies);
+        
       } catch (error) {
+        console.error("An error occurred while fetching trend movies:", error);
         setError(error.message);
       } finally {
         
@@ -26,8 +27,10 @@ export default function Home() {
     };
 
     fetchTrendMovies();
-    // eslint-disable-next-line
-  }, []);
+   
+  }, []); 
+
+  console.log(movies);
 
   return (
     <div>
