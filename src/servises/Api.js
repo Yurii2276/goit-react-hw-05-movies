@@ -6,6 +6,7 @@ const DAY_TREND_FILM = 'trending/all/day';
 const DETAIL_FILM = 'movie/';
 const CAST_SET = '/credits';
 const REWIEWS_SET = '/reviews';
+const FILM_SEARCH = '/search/movie'
 
 export const findTrendMovies = async () => {
   const { data } = await axios.get(
@@ -34,3 +35,12 @@ export const findMovieDetails = async (movie_id) => {
     );
     return data;
   };
+
+  export const findFilm = async (query) => {
+    const { data } = await axios.get(
+      `${BASE_URL}${FILM_SEARCH}?api_key=${API_KEY}&query=${query}`
+    );
+    return data;
+  };
+
+  

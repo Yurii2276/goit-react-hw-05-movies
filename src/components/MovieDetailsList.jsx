@@ -19,7 +19,7 @@ export default function MovieDetailsList({ movie }) {
                 ? `https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`
                 : defaultImg
             }
-            width={250}
+            width={450}
             alt="poster"
           />
         </div>

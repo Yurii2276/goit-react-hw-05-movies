@@ -1,0 +1,32 @@
+.inputContainer{
+display: flex;
+flex-direction: row;
+margin-top: 20px;
+}
+
+.inputStyle{
+height: 30px;
+width: 550px;
+border: 1px solid grey;
+border-radius: 5px;
+}
+
+.btnStyle{
+    height: 30px;
+    width: 50px;
+    border: 1px solid grey;
+border-radius: 5px;
+display: flex;
+align-items: center;
+  justify-content: center; 
+  transition: all 0.3s ease;
+
+}
+
+.btnStyle:hover,
+.btnStyle:focus
+{
+border-color: blue;
+background-color: lightblue; 
+color: white;
+}
