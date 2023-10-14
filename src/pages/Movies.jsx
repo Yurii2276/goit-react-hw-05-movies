@@ -19,7 +19,6 @@ export default function Movies() {
   const handleFormSubmit = event => {
     event.preventDefault(); 
     const searchValue = event.currentTarget.elements.query.value;
-    console.log(searchValue);
     setSearchParams({ query: searchValue });
   };
 
@@ -40,9 +39,6 @@ export default function Movies() {
 
     fetchFilm(query);
   }, [query]);
-
-
-console.log('По запиту', query, 'Знайдено фільм----', movie)
 
   return (
     <div>
