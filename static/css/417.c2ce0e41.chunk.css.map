@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/417.c2ce0e41.chunk.css","mappings":"AAAA,sBACA,gBACA,CAEA,0BACA,iBACA,CAEA,sBACA,eAEA","sources":["components/Cast.module.css"],"sourcesContent":[".castList{\nmargin-left: 20px;\n}\n\n.castListItem{\nmargin-bottom: 5px;\n}\n\n.imgStyle{\nmargin-top: 15px;\n\n}\n\n"],"names":[],"sourceRoot":""}
